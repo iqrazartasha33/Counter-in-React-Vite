@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #0f4f8e, #01497c, #00b0ff, #005f99);
+  background-size: 1000% 1000%;
+  animation: diagonalShift 20s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes diagonalShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.counter-container {
+  background-color: #013a63;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 300px;
+}
+
+.counter-container h1 {
+  font-size: 2.5rem;
+  color: #d9faff;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+}
+
+.counter-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.counter-button {
+  font-size: 2.5rem;
+  color: #00aaff;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.4s ease, color 0.4s ease, text-shadow 0.4s ease;
+}
+
+.counter-button:hover {
+  color: #00ffd9;
+  transform: scale(1.25);
+  text-shadow: 0 0 12px #00ffd9;
+}
+
+.counter-value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #d9faff;
+  min-width: 60px;
+}
+
+.reset-button {
+  background-color: #ff6f61;
+  box-shadow: 0 4px 8px rgba(255, 111, 97, 0.8),
+    0 0 15px rgba(255, 111, 97, 0.7);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  user-select: none;
+  transition: background-color 0.4s ease, transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.reset-button:hover {
+  background-color: #005f99;
+  color: #00ffd9;
+  transform: scale(1.1);
+  box-shadow: 0 0 16px #00ffd9;
+}
+
+@media (min-width: 320px) and (max-width: 399px) {
+  .counter-container {
+    width: 90vw;
+    padding: 30px 20px;
+  }
+
+  .counter-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .counter-controls {
+    gap: 10px;
+  }
+
+  .counter-button {
+    font-size: 2rem;
+  }
+
+  .counter-value {
+    font-size: 2.2rem;
+    min-width: 50px;
+  }
+
+  .reset-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .counter-container {
+    width: 90vw;
+    padding: 30px 20px;
+  }
+
+  .counter-container h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .counter-controls {
+    gap: 15px;
+  }
+
+  .counter-button {
+    font-size: 2rem;
+  }
+
+  .counter-value {
+    font-size: 2.2rem;
+    min-width: 50px;
+  }
+
+  .reset-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
